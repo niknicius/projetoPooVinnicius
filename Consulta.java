@@ -1,6 +1,4 @@
-/*
- */
-package sisclinica;
+package br.ufpb.dcx;
 
 /**
  *
@@ -12,14 +10,14 @@ public class Consulta {
     private Medico medico;
     private String dataConsulta;
     private String dataRetorno;
-    private boolean encerrada;
+    private boolean aberta;
 
-    public Consulta(Paciente paciente, Medico medico, String dataConsulta, String dataRetorno) {
+    public Consulta(Paciente paciente, Medico medico, String dataConsulta, String dataRetorno, boolean aberta) {
         this.paciente = paciente;
         this.medico = medico;
         this.dataConsulta = dataConsulta;
         this.dataRetorno = dataRetorno;
-        this.encerrada = false;
+        this.aberta = aberta;
     }
 
     public Paciente getPaciente() {
@@ -54,11 +52,13 @@ public class Consulta {
         this.dataRetorno = dataRetorno;
     }
 
-    public boolean isEncerrada() {
-        return encerrada;
+    public boolean getAberta() {
+        return aberta;
     }
 
-    public void setEncerrada(boolean encerrada) {
-        this.encerrada = encerrada;
+    public void setAberta(boolean aberta) {
+        this.aberta = aberta;
     }
+    
+    
 }
